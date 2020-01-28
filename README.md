@@ -14,7 +14,7 @@ IDLE - Python 3.7 64-Bit
 Profesor LUIS DANIEL BENAVIDES NAVARRO
 
 # Version 0.2
-(2 actualizaciones a la fecha 28/01/2020)
+2 actualizaciones a la fecha (28/01/2020)
 
 # Authors
 Javier Esteban Lopez Peña - Estudiante ISIS
