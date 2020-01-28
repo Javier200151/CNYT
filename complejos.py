@@ -77,12 +77,12 @@ def sumacompvector(v1):
     if len(v1) < 2 :
         return v1[0]
     elif len(v1) == 2:
-        s = suma(v1[0],v1[1])
+        s = sumacomplex(v1[0],v1[1])
         return s
     else:
-        s = suma(v1[0],v1[1])
+        s = sumacomplex(v1[0],v1[1])
         for i in range (2,len(v1)):
-            s = suma(s,v1[i])
+            s = sumacomplex(s,v1[i])
         return s
     
 def accionmatrizvector(m1,v1):
