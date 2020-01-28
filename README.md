@@ -2,7 +2,7 @@
 Una calculadora de numeros complejos con suma, resta, division, multiplicacion, modulo, conjuncion y cartesiano a polar, programado en python acompañado de sus pruebas con PyUnit
 
 # Getting Started
-Para descargar este archivo puede seleccionar todo el texto y copiarlo en un archivo .py para empezar a probar la libreria.
+Para descargar este archivo puede seleccionar todo el texto y copiarlo en un archivo .py para empezar a probar la libreria. Se deben poner la libreria en la misma direccion de archivo que las pruebas para que funcionen. 
 
 # Prerequisites
 Se uso el lenguaje python, se escribio en el editor de IDLE, cualquier editor de python (.py) sera suficiente para correr la libreria
