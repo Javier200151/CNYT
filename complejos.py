@@ -53,18 +53,72 @@ def sumavector(v1,v2):
         a=sumacomplex(v1[i],v2[i])
         c.append(a)
     return c
-
-def inversovector(v1):
+adicionmatrices(m1,m2):
     c=[]
-    for i in range(len(v1)):
-        c.append((v1[i][0]*(-1),v1[i][1]*(-1)))
+    for i in range(len(m1)):
+        c.append([])
+        for j in range(len(m1[0])):
+            a=sumacomplex(m1[i][j],m2[i][j])
+            c[i].append(a)
     return c
 
-def multescalarvector(z1,v1):
+def inversamatriz(m1):
     c=[]
-    for i in range(len(v1)):
-        c.append(multicomplex(z1,v1[i]))
-    return camatrices(m1,m2):
+    for i in range(len(m1)):
+        c.append(inversovector(m1[i]))
+    return c
+
+def multescalarmatrices(z1,m1):
+    c=[]
+    for i in range(len(m1)):
+        c.append(multescalarvector(z1,m1[i]))
+    return c
+
+def matriztranspuesta(m1):
+    c=[]
+    for i in range(len(m1)):
+        c.append([])
+        for j in range(len(m1[0])):
+            c[i].append(m1[j][i])
+    return c 
+
+def conjmatriz(m1):
+    c=[]
+    for i in range(len(m1)):
+        c.append([])
+        for j in range(len(m1[0])):
+            c[i].append(conjcomplex(m1[j][i]))
+    return c
+
+def adjmatriz(m1):
+    return conjmatriz(matriztranspuesta(m1))
+
+def innervector(v1,v2):
+    s = multiplicacion(v1[0],v2[0])
+    for i in range(1, len(v1)):
+        s  = sumacomplex(s,multicomplex(v1[i],v2[i]))
+    return s
+
+def conjugadavector(v1):
+    c = []
+    for i in range (len(v1)):
+        c.append(conjcomplex(v1[i]))
+    return c
+
+def norma(v1):
+    if tuple == type(a[0]):
+        return ((innervector(v1,conjugadavector(v1)))[0])**(1/2)
+
+def Vectorsproductotensor(m1,m2):
+    c=[]
+    for j in range(len(m1)):
+        res=multescalarvector(m1[j],m2)
+        for k in range(len(res)):
+            c.append(res[k])
+    return c
+        
+    
+##def distanciamatrices(m1,m2):
 ##    c=m1
 ##    m2=multescalarmatrices((-1,0),m2)
 ##    c=adicionmatrices(m1,m2)
@@ -77,12 +131,12 @@ def sumacompvector(v1):
     if len(v1) < 2 :
         return v1[0]
     elif len(v1) == 2:
-        s = sumacomplex(v1[0],v1[1])
+        s = suma(v1[0],v1[1])
         return s
     else:
-        s = sumacomplex(v1[0],v1[1])
+        s = suma(v1[0],v1[1])
         for i in range (2,len(v1)):
-            s = sumacomplex(s,v1[i])
+            s = suma(s,v1[i])
         return s
     
 def accionmatrizvector(m1,v1):
@@ -98,8 +152,10 @@ def accionmatrizvector(m1,v1):
 
 
 def main():
-    z1=[(1,1),(2,1)]
-    print(multicomplex())
+    m1=[[(1,0),(0,0)],[(1,0),(0,0)]]
+    m2=[(4,0),(-3,0)]
+
+    print(productotensor(m1,m2))
 main()
 
 ##    m1=[[(3,2),(3,1)],[(0,2),(1,2)]]
@@ -121,6 +177,22 @@ main()
 ##    "+str(modcomplex(z1))) pP("Conjugada",conjcomplex(z1))
 ##    pP("Cartesiano a Polar",polarcomplex(z1))
 
+def inversovector(v1):
+    c=[]
+    for i in range(len(v1)):
+        c.append((v1[i][0]*(-1),v1[i][1]*(-1)))
+    return c
+
+def multescalarvector(z1,v1):
+    c=[]
+    for i in range(len(v1)):
+        c.append(multicomplex(z1,v1[i]))
+    return c
+##    c=m1
+##    m2=multescalarmatrices((-1,0),m2)
+##    c=adicionmatrices(m1,m2)
+##    norma(c) #Toca hacer la multiplicacion de matrices
+    
 
 #---------------------------MATRICES COMPLEJAS-----------------------------------#
 
@@ -179,6 +251,15 @@ def conjugadavector(v1):
 def norma(v1):
     if tuple == type(a[0]):
         return ((innervector(v1,conjugadavector(v1)))[0])**(1/2)
+
+def Vectorsproductotensor(m1,m2):
+    c=[]
+    for j in range(len(m1)):
+        res=multescalarvector(m1[j],m2)
+        for k in range(len(res)):
+            c.append(res[k])
+    return c
+        
     
 ##def distanciamatrices(m1,m2):
 ##    c=m1
@@ -214,8 +295,10 @@ def accionmatrizvector(m1,v1):
 
 
 def main():
-    z1=[(1,1),(2,1)]
-    print(multicomplex())
+    m1=[[(1,0),(0,0)],[(1,0),(0,0)]]
+    m2=[(4,0),(-3,0)]
+
+    print(productotensor(m1,m2))
 main()
 
 ##    m1=[[(3,2),(3,1)],[(0,2),(1,2)]]
