@@ -26,7 +26,7 @@ Para descargar este archivo puede seleccionar todo el texto y copiarlo en un arc
 Se uso el lenguaje python, se escribio en el editor de IDLE, cualquier editor de python (.py) sera suficiente para correr la libreria
 
 ## Built With
-IDLE - Python 3.7 64-Bit
+IDLE - Python 3.8.1 64-Bit
 
 ## Contributing
 Profesor LUIS DANIEL BENAVIDES NAVARRO
