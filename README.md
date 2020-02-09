@@ -32,7 +32,7 @@ IDLE - Python 3.8.1 64-Bit
 Profesor LUIS DANIEL BENAVIDES NAVARRO
 
 ## Version 0.2
-2 actualizaciones a la fecha (28/01/2020)
+5 actualizaciones a la fecha (08/02/2020)
 
 ## Authors
 Javier Esteban Lopez Peña - Estudiante ISIS
